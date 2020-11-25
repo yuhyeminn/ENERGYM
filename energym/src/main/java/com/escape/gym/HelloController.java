@@ -11,27 +11,31 @@ public class HelloController {
 	}
 	
 	//페이지 확인용
-	@RequestMapping("/membership")
+	@RequestMapping("/mypage/membership")
 	public String membership() {
 		return "/mypage/membership";
 	}
-	@RequestMapping("/my_information")
+	@RequestMapping("/mypage/reservation")
+	public String reservation() {
+		return "/mypage/reservation";
+	}
+	@RequestMapping("/mypage/my_information")
 	public String my_information() {
 		return "/mypage/my_information";
 	}
-	@RequestMapping("/withdraw")
+	@RequestMapping("/mypage/withdraw")
 	public String withdraw() {
 		return "/mypage/withdraw";
 	}
-	@RequestMapping("/qna")
+	@RequestMapping("/mypage/qna")
 	public String qna() {
 		return "/mypage/qna";
 	}
-	@RequestMapping("/qna_detail")
+	@RequestMapping("/mypage/qna_detail")
 	public String qna_detail() {
 		return "/mypage/qna_detail";
 	}
-	@RequestMapping("/schedule")
+	@RequestMapping("/mypage/schedule")
 	public String schedule() {
 		return "/mypage/schedule";
 	}

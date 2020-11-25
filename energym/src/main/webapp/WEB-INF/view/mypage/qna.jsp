@@ -48,19 +48,19 @@
 													<td style="width:10%;" align=center bgcolor="#f2a840"><b style="color:#000000;">조회</b></td>
 												</tr>
 
-												<c:forEach items="${qnaList}" var="qna">
+												
 													<!-- guest start -->
 													<tr style="border-bottom:1px solid #e7e7e7;">
-														<td align=center bgcolor="ffffff" height="20">1${qna.qna_no}</td>
+														<td align=center bgcolor="ffffff" height="20">1</td>
 														<td align=center bgcolor="ffffff" style="padding-left: 10">
-															<a href="qna_detail?qna_no=${qna.qna_no}">가격문의드립니다.<b>[1]</b></a>
+															<a href="qna_detail?qna_no=1">가격문의드립니다.<b>[1]</b></a>
 														</td>
-														<td align=center bgcolor="ffffff"><a href="">w필라테스${qna.gym_name}</a></td>
-														<td align=center bgcolor="ffffff">2020-10-10${qna.qna_date}</td>
-														<td align=center bgcolor="ffffff">10${qna.qna_viewcount}</td>
+														<td align=center bgcolor="ffffff"><a href="">w필라테스</a></td>
+														<td align=center bgcolor="ffffff">2020-10-10</td>
+														<td align=center bgcolor="ffffff">10</td>
 													</tr>
 													<!-- guest end -->
-												</c:forEach>
+											
 
 											</table>
 										</form> <!-- button -->
