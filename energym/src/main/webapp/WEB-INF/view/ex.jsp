@@ -6,7 +6,7 @@
 
 
 
-commit test - eunjung
+commit test - "Hello im koko"
 
 
 
