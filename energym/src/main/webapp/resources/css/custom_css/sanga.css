@@ -1,0 +1,93 @@
+a > h4 {margin-bottom: 1.5rem;}
+
+.sa_form {
+    padding: 40px;
+}
+
+.apply_job_form .input_field input, .apply_job_form .input_field textarea {
+    height: 60px;
+    border: 1px solid #E8E8E8;
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .col-md-3 > p, .col-md-9 > p, .col-md-5 > p, .col-md-7 > p {
+      color: black;
+      margin-top: revert;
+  }
+  
+  a.plus_mark, a.minus_mark {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fd7e14;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    background: #EFFDF5;
+    margin-right: 15px;
+  }
+
+  a.plus_mark:hover, a.minus_mark:hover {
+    background: #fd7e14;
+    color: #fff;
+  }
+
+  .sa_col9 {
+    padding-bottom: 30px;
+  }
+
+  .sa_p {
+    color: black;
+    margin-top: revert;
+  }
+
+  .sa_class_manage {
+    margin: 60px;
+  }
+
+  .sa_span {
+      padding-top: 5px;
+  }
+
+  .sa_select .default-select,.sa_select .nice-select {
+      width: 150px;
+  }
+
+  .gym_fac_photo{width:150px;height:150px;margin:10px 20px 10px 0px;display: inline-block;}
+  
+  .gym_fac_photo img{width:100%;height:100%;object-fit:cover;}
+
+  .sa_table td, .sa_table th {
+    padding: 10px;
+    font-size: small;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+
+  }
+
+  .sa_table thead th {
+    vertical-align: middle;
+  }
+
+  .sa_btn {
+    padding: 5px;
+    line-height: 20px;
+  }
+
+  .sa_img {
+    width: 250px;
+  }
+
+  div.sa_radio.primary-radio {
+    margin-top: 5px!important;
+    margin-left: 10px!important;
+  }

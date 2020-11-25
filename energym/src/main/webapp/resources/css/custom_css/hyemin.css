@@ -1,0 +1,270 @@
+/* 인덱스 페이지 */
+.btn-orange{background: #fd7e14;color: #fff;display: inline-block;width:100%;padding: 11px 25px;border: 0;border: 1px solid transparent;text-align: center;color: #fff !important;transition: 0.3s;cursor: pointer;}
+.btn-orange:hover{color: #fd7e14 !important;border: 1px solid #fd7e14;background: transparent;}
+
+
+/* gym 검색 리스트*/
+.facilities_check{margin:10px;}
+.facilities_check input{margin-right:5px;}
+.facilities_box{margin: 15px 0px;}
+.gym_thumnail{width:200px;height:150px;}
+.gym_thumnail img{width: 100%; height: 100%; object-fit: cover;}
+@media (max-width: 767px){
+    .gym_thumnail{width:100%;height:100%}
+}
+.gyms_content{margin-left:10px;}
+.gym-list-marker{color:#fd7e14;font-size:18px;margin-right:5px;}
+.gym-detail-btn{width:40px;cursor:pointer} 
+
+.exercise_list{margin-top:54px;}
+.exercise_tag{border:solid 1px #fd7e14; border-radius: 25px; line-height:27px; padding:0px 12px; font-size: 12px; color:#fd7e14; cursor:initial}
+@media (max-width: 767px){
+    .exercise_list{margin-top:15px;}
+}
+
+/*gym 상세 페이지*/
+.gym_detail_box{border-radius: 15px!important; border: 1px solid lightgray;}
+.gym_detail_inform{margin:20px 0px;color:gray;}
+.single_gyms{padding:50px;margin-bottom:30px;}
+.gym_name{font-size:28px;font-weight:bold;}
+.gym_detail_thumnail{width:500px;height:300px;}
+.gym_detail_thumnail img{width:100%;height:100%;object-fit:cover;}
+@media (max-width: 767px){
+    .gym_detail_thumnail{width:100%;height:100%}
+}
+.gyms_detail_content{margin-left:2rem;}
+.form-label{width: 9.6rem;margin-bottom: 0px;padding: 6px 0px;}
+.ticket-period{margin:15px 13px;}
+.ticket-period button{margin-right:7px;}
+.ticket-buy-btn{width: 89.5%; margin-left:12px;}
+.nice-select.wide.select-ticket{width:72%!important;}
+.ticket-container{margin-top:40px;}
+
+.gym-detail-tab{width: 20%;height:80px;color:gray;border:1px solid lightgray;border-radius:10px;font-size:20px;background-color:#f7f7f7}
+.gym_summary{width:100%;background:#f7f7f7;border:1px solid #e9ebef}
+.gym_inform_wrap{padding:80px 100px;}
+.gym_inform_section{margin-bottom:80px;}
+.gym_inform_section .section-header{font-size: 20px;font-weight: bold;color:rgb(94, 94, 94)}
+.gym_summary{padding:50px;border-radius:5px;}
+.single-ticket{margin-bottom:30px;}
+.single-ticket .ticket-name{font-size:17px;font-weight: bold;color:black}
+.single-ticket{border:1px solid #e9ebef;border-radius:5px;}
+.single-ticket div{padding:20px;}
+.single-ticket .ticket-header{border-bottom:1px solid #e9ebef;}
+.single-ticket .ticket-period-label{width:100px;margin-bottom:0px;font-weight:bold;}
+.single-ticket p{margin-bottom:0px;}
+.tab-active {background-color:#fd7e14;color:white;border:none;}
+.gym_fac_photo{width:150px;height:150px;margin:10px 20px 10px 0px;display: inline-block;}
+.gym_fac_photo img{width:100%;height:100%;object-fit:cover;}
+.gym_qna_form{padding: 40px; background:#f7f7f7;border:1px solid #e9ebef;border-radius:5px;margin-top:0px!important;}
+
+/* 로그인 컨테이너 */
+.login-container p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+.login-container a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.login-container button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.login-container button:active {
+	transform: scale(0.95);
+}
+
+.login-container button:focus {
+	outline: none;
+}
+
+.login-container button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.login-container form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+.login-container .sign-input, .radio-div {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.login-container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 800px;
+	max-width: 100%;
+	min-height: 550px;
+}
+
+.login-container .form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.login-container .sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.login-container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.login-container .sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.login-container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.login-container .login-overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.login-container.right-panel-active .login-overlay-container{
+	transform: translateX(-100%);
+}
+
+.login-container .login-overlay {
+	background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.login-container.right-panel-active .login-overlay {
+  	transform: translateX(50%);
+}
+
+.login-container .login-overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.login-container .login-overlay-left {
+	transform: translateX(-20%);
+}
+
+.login-container.right-panel-active .login-overlay-left {
+	transform: translateX(0);
+}
+
+.login-container .login-overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.login-container.right-panel-active .login-overlay-right {
+	transform: translateX(20%);
+}
+
+.login-container .social-container {
+	margin: 20px 0;
+}
+
+.login-container .social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.login-container .sign-input::placeholder {
+    color: #7e7e7e;
+}
+.modal-backdrop{z-index: inherit;}
+.user-type-radio label, .gender-radio label{margin:10px;}
+.gender-radio label.radio-label{margin: 10px 0px; width: 50px;text-align: initial;cursor: initial;color:#7e7e7e}
+.radio-div{padding:4px 15px;}
+.signUp-submit-btn{margin-top:10px;}
+
+/* 커뮤니티 게시판 */
+.community-board-container{padding:30px;background-color:#fbf9ff}
+.community-section{padding:30px;}
