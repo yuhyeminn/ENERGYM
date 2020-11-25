@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/view/include/include_navbar.jsp"%>
+<%@ include file="/WEB-INF/view/common/header.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- bradcam_area  -->
@@ -93,7 +93,7 @@
 	</div>
 </div>
 
-<%@ include file="/WEB-INF/view/include/include_footer.jsp"%>
+<%@ include file="/WEB-INF/view/common/footer.jsp"%>
 </body>
 
 </html>
