@@ -1,0 +1,77 @@
+package com.escape.gym;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+	@RequestMapping("/") 
+	public String index() { 
+		return "index"; 
+	}
+	
+	//페이지 확인용
+	@RequestMapping("/membership")
+	public String membership() {
+		return "/mypage/membership";
+	}
+	@RequestMapping("/my_information")
+	public String my_information() {
+		return "/mypage/my_information";
+	}
+	@RequestMapping("/withdraw")
+	public String withdraw() {
+		return "/mypage/withdraw";
+	}
+	@RequestMapping("/qna")
+	public String qna() {
+		return "/mypage/qna";
+	}
+	@RequestMapping("/qna_detail")
+	public String qna_detail() {
+		return "/mypage/qna_detail";
+	}
+	@RequestMapping("/schedule")
+	public String schedule() {
+		return "/mypage/schedule";
+	}
+	
+	@RequestMapping("/gym/search")
+	public String gym_search() {
+		return "/gym/gym_search";
+	}
+	@RequestMapping("/gym/detail")
+	public String gym_detail() {
+		return "/gym/gym_detail";
+	}
+	@RequestMapping("/gym/detail_qna")
+	public String gym_detail_qna() {
+		return "/gym/gym_detail_qna";
+	}
+	@RequestMapping("/gym/ticket_payment")
+	public String ticket_payment() {
+		return "/gym/ticket_payment";
+	}
+	
+	@RequestMapping("/community/board")
+	public String commu_board() {
+		return "/community/board";
+	}
+	
+	@RequestMapping("/center_admin/center_info")
+	public String center_info() {
+		return "/center_admin/center_info";
+	}
+	@RequestMapping("/center_admin/center_management")
+	public String center_management() {
+		return "/center_admin/center_management";
+	}
+	@RequestMapping("/center_admin/center_registration")
+	public String center_registration() {
+		return "/center_admin/center_registration";
+	}
+	@RequestMapping("/center_admin/customer_management")
+	public String customer_management() {
+		return "/center_admin/customer_management";
+	}
+}
