@@ -36,6 +36,7 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
 		<!-- Junit, Hamcrest, Mockito를 포함한 스프링 어플리케이션 테스트 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -51,8 +52,9 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		<!-- JSP사용설정 -->
 		</dependency>
+		
+		<!-- JSP사용설정 -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
@@ -62,12 +64,12 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.1.1</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
@@ -83,8 +85,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j -->
-	
 		
 		<!-- oracle driver -->
 		<dependency>
@@ -97,7 +97,8 @@
 		    <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
 		    <version>1.16</version>
 		</dependency>
-	
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j -->
 	    <dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-log4j2</artifactId>
