@@ -11,6 +11,7 @@ select c.class_no,c.class_day,c.class_name,c.class_start,c.class_end,c.class_cap
        c.class_org_file,c.class_upload_file
 from class c, instructor i,gym g
 where c.inst_no=i.inst_no
+and i.gym_no=g.g_no
 and g.gym_no=?;
 
 select count(member_id)
