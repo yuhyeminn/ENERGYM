@@ -1,4 +1,4 @@
-package com.escape.gym;
+package com.escape.energym;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
