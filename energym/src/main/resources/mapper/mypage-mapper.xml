@@ -1,3 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.escape.gym.mapper.mypageMapper"></mapper>
+<mapper namespace="com.escape.gym.mapper.mypageMapper">
+	<resultMap type="" id="" autoMapping="true"></resultMap>
+	
+	<!-- 1.회원 정보 출력 -->
+	<select id="readMemberOne" parameterType="int" resultType="com.escape.energym.common.dto.Member">
+		select member_id,member_pwd,member_name,member_email,member_phone
+		from member
+		where member_no=#{memberNo}
+	</select>
+	<!-- 2.회원 정보 수정 -->	
+	<update id="updateMember" parameterType="com.escape.energym.common.dto.Member">
+		update member 
+		set member_pwd=#{memberPwd}, member_name=#{memberName}, member_email=#{memberEmail}, member_phone=#{memberPhone}
+		where member_id=#{memberId}
+	</update>
+	<!-- 3.회원 탈퇴 -->
+	<delete id="deleteMember" parameterType="int">
+		delete
+		from member
+		where member_no=#{memberNo}
+	</delete>
+	
+	<!-- 4.이용권 목록 출력 -->
+	<select id="readMembershipList" parameterType="" resultMap="">
+		select t.ticket_no,t.ticket_name,t.ticket_term,t.ticket_count,g.gym_no,g.gym_name
+		from ticket t,gym g
+		where t.gym_no=g.gym_no
+		and
+	</select>
+	
+	<select id="" parameterType="" resultMap="">
+	
+	</select>
+	<insert id=""></insert>
+</mapper>

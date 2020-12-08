@@ -2,6 +2,9 @@ package com.escape.energym.mypage.dao;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.escape.energym.common.dto.Answer;
@@ -11,11 +14,15 @@ import com.escape.energym.common.dto.Reservation;
 
 @Repository
 public class MypageDAOImpl implements MypageDAO {
-
+	
+	@Inject
+	private SqlSession sqlSession;
+	
+	private static final String readMemberOne = "MypageMapper.readMemberOne";
+	
 	@Override
 	public Member readMemberOne(String memberId) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Member)sqlSession.selectOne(readMemberOne);
 	}
 
 	@Override
@@ -86,6 +93,18 @@ public class MypageDAOImpl implements MypageDAO {
 
 	@Override
 	public boolean deleteQna(int qnaNo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateUsablePlus(String memberId, int paymentNo) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateUsableMinus(String memberId, int paymentNo) throws Exception {
 		// TODO Auto-generated method stub
 		return false;
 	}
