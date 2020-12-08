@@ -10,8 +10,8 @@ public class Class {
 	private int instNo;
 	private String className;
 	private String classDay;
-	private Date classStart;
-	private Date classEnd;
+	private int classStart;
+	private int classEnd;
 	private int classCapacity;
 	private String classOrgFile;
 	private String classUploadFile;

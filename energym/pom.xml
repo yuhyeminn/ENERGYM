@@ -111,6 +111,12 @@
 		    <version>1.18.16</version>
 		    <scope>provided</scope>
 		</dependency>
+		<!-- @Inject : maven에 javax 라이브러리 의존성 추가 -->
+		<dependency>
+		    <groupId>javax.inject</groupId>
+		    <artifactId>javax.inject</artifactId>
+		    <version>1</version>
+		</dependency>
 		
 	</dependencies>
 
