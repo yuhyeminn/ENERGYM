@@ -21,17 +21,45 @@
 		from member
 		where member_no=#{memberNo}
 	</delete>
-	
 	<!-- 4.이용권 목록 출력 -->
 	<select id="readMembershipList" parameterType="" resultMap="">
-		select t.ticket_no,t.ticket_name,t.ticket_term,t.ticket_count,g.gym_no,g.gym_name
-		from ticket t,gym g
-		where t.gym_no=g.gym_no
-		and
+		
 	</select>
-	
-	<select id="" parameterType="" resultMap="">
-	
+	<!-- 5.이용권 수업 목록 출력 (이용권,날짜 필터링) -->
+	<select id="readClassList" parameterType="" resultMap="">
+		select c.class_no,c.class_day,c.class_name,c.class_start,c.class_end,c.class_capacity,i.inst_name,
+        	   c.class_org_file,c.class_upload_file
+		from class c, instructor i,gym g
+		where c.inst_no=i.inst_no
+		and i.gym_no=g.g_no
+		and g.gym_no=?
 	</select>
-	<insert id=""></insert>
+	<!-- 6.현재 수업 예옉자 수 출력 -->
+	<select id="readClassMemberCount" parameterType="int" resultType="int">
+		select count(member_id)
+		from reservation
+		where class_no=?
+	</select>
+	<!-- 7.예약 추가 -->
+	<insert id="">
+		insert into reservation 
+		values(reservation.nextval,?,?,?,sysdate)
+	</insert>
+	<!-- 8.예약 취소 -->
+	<delete id="">
+		delete from reservation where resv_no=#{resvNo}
+	</delete>
+	<!-- 9.예약 목록 출력(내 수업 목록) -->
+	<select id="">
+		select r.resv_no,c.class_date,c.class_no,c.class_day,
+		       c.class_org_file,c.class_upload_file,
+		       c.class_name,c.class_start,c.class_end,c.class_capacity,i.inst_name
+		from reservation r,class c,instructor i
+		where r.member_id=?
+		and c.class_no=r.class_no
+		and c.inst_no=i.inst_no
+	</select>
+	<!-- 10.수업 횟수 증가 -->
+	<!-- 11.수업 횟수 차감 -->
+	<!-- 12. -->
 </mapper>
