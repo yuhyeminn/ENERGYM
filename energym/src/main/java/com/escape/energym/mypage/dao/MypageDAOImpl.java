@@ -109,4 +109,10 @@ public class MypageDAOImpl implements MypageDAO {
 		return false;
 	}
 
+	@Override
+	public int readClassMemberCount(int classNo) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

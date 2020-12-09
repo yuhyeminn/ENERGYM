@@ -3,20 +3,22 @@ select member_id,member_pwd,member_name,member_email,member_phone
 from member
 where member_no=?
 
---회원정보를 수정
+--회원정보 수정
 update member 
-set member_pwd=? member_name=? member_email=? member_phone=?
+set member_pwd=?, member_name=?, member_email=?,member_phone=?
 where member_id=?
 
---회원 탈퇴하기
+--회원 탈퇴
 delete 
 from member 
 where member_no=?
 
---내가 보유한 이용권 목록을 출력하시오. 
-select t.ticket_no,t.ticket_name,t.ticket_term,t.ticket_count,g.gym_no,g.gym_name
+--이용권 목록 출력
+select p.payment_no, p.member_id, p.payment_date, t.ticket_no,t.ticket_name,t.ticket_term,t.ticket_count,g.gym_no,g.gym_name
 from ticket t,gym g
 where t.gym_no=g.gym_no
+and 
+and p.member_id=?
 
 --이용권에 해당하는 센터에서 선택한 날짜의 수업 목록을 출력하시오.
 --현재인원수는 따로 구하기(count사용)
@@ -38,6 +40,10 @@ where class_no=?
 insert 
 into reservation 
 values(reservation.nextval,?,?,?,sysdate)
+
+-- 횟수 차감
+delete
+from 
 
 --내가 수강하는 수업 목록과 날짜를 출력하시오.
 --현재인원수는 따로 구하기(count사용) 

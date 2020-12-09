@@ -22,13 +22,16 @@ public interface MypageDAO {
 	//이용권 수업 목록 출력 (이용권,날짜 필터링)
 	public List readClassList(int gymNo, int classDate) throws Exception;
 	
+	//현재 수업 예옉자 수 출력
+	public int readClassMemberCount(int classNo) throws Exception;
+
 	//예약 추가
 	public boolean createClass(Reservation reservation) throws Exception;	
-	//예약 목록 출력
-	public List readMyClass(@Param("memberId") String memberId) throws Exception;	
-	//예약 삭제
+	//예약 취소
 	public boolean deleteReservation(int resvNo) throws Exception;
-
+	//예약 목록 출력(내 수업 목록)
+	public List readMyClass(@Param("memberId") String memberId) throws Exception;	
+		
 	//수업 횟수 증가
 	public boolean updateUsablePlus(@Param("memberId") String memberId, int paymentNo) throws Exception;
 	//수업 횟수 차감
