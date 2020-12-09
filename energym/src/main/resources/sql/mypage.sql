@@ -45,7 +45,10 @@ values(reservation.nextval,?,?,?,sysdate)
 delete
 from 
 
---내가 수강하는 수업 목록과 날짜를 출력하시오.
+--수업(예약)취소하기
+delete from reservation where resv_no=?
+
+--내가 수강하는 수업 목록과 날짜를 출력하시오.(예약 목록)
 --현재인원수는 따로 구하기(count사용) 
 --(예약번호,수업날짜,수업번호,수업요일,원본파일명,업로드파일명,수업명,시작시간,종료시간,현재인원,최대인원,강사명)
 select r.resv_no,c.class_date,c.class_no,c.class_day,
@@ -56,9 +59,6 @@ where r.member_id=?
 and c.class_no=r.class_no
 and c.inst_no=i.inst_no
 
---수업(예약)취소하기
-delete from reservation where resv_no=?
- 
 --1:1문의 게시글 목록을 출력하시오.
 select qna.qna_no,gym.gym_name,qna.qna_title,qna.qna_date,qna.qna_answer
 from qna,gym
