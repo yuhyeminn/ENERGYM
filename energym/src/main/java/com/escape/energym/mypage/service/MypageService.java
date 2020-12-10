@@ -1,5 +1,10 @@
 package com.escape.energym.mypage.service;
 
+import org.springframework.stereotype.Service;
+
+import com.escape.energym.common.dto.Member;
+
+@Service
 public interface MypageService {
 	/*
 	 * 1. 내 이용권 출력
@@ -15,4 +20,7 @@ public interface MypageService {
 	 * 11. 1:1 문의 삭제
 	 * 12. 회원 탈퇴
 	 */
+	
+	public Member readMemberOne(String memberId) throws Exception;
+	
 }
