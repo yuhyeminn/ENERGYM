@@ -40,6 +40,7 @@
 											<li><a href="${pageContext.request.contextPath}/">홈</a></li>
 											<li><a href="${pageContext.request.contextPath}/search">센터 찾기</a></li>
 											<li><a href="#">커뮤니티</i></a></li>
+											
 											<!-- <li><a href="#">마이페이지</i></a> -->
 											</li>
 										</ul>
@@ -49,7 +50,7 @@
 							<div class="col-xl-3 col-lg-3 d-none d-lg-block">
 								<div class="Appointment">
 									<div class="d-none d-lg-block">
-										<a class="boxed-btn3" href="#">로그인</a>
+										<a class="boxed-btn3" href="#" data-toggle="modal" data-target="#login-register-modal">로그인</a>
 									</div>
 								</div>
 							</div>
@@ -64,3 +65,81 @@
 		</div>
 	</header>
     <!-- header-end -->
+    
+    
+<!-- 로그인 모달창 -->
+<div class="modal fade" id="login-register-modal">
+		<div class="modal-dialog modal-dialog-centered login-modal" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close login-modal-close" data-dismiss="modal" aria-label="Close"style="color:white">
+	          			<span aria-hidden="true">&times;</span>
+	        		</button>
+				</div>
+				<div class="modal-body">
+					<div class="login-container container" id="login-container">
+						<div class="form-container sign-up-container">
+							<form action="#">
+								<h3>회 원 가 입</h3>
+								<div class="row user-type-radio">
+										<label><input type="radio" name="user_type" value="user" checked> 일반 회원</label>
+										<label><input type="radio" name="user_type" value="owner"> 사업자 회원</label>
+								</div>
+								<input type="text" class="sign-input" placeholder="ID" />
+								<input type="password" class="sign-input" placeholder="Password" />
+								<input type="text" class="sign-input" placeholder="Name" />
+								<div class="row gender-radio radio-div">
+									<label for="" class="radio-label">성별</label>
+									<label><input type="radio" name="gender" value="f" checked> 여성</label>
+									<label><input type="radio" name="gender" value="m"> 남성</label>
+								</div>
+								<input type="email" class="sign-input" placeholder="Email" />
+								<input type="text" class="sign-input" placeholder="Phone" />
+								<button class="signUp-submit-btn">회원 가입</button>
+							</form>
+						</div>
+						<div class="form-container sign-in-container">
+							<form action="${pageContext.request.contextPath}/member/login" method="post">
+								<h3>로 그 인</h3>
+								<input type="text" class="sign-input" name="memberId" placeholder="아이디" />
+								<input type="password" class="sign-input" name="memberPwd" placeholder="비밀번호" />
+								<a href="#" style="color:gray;">비밀번호 찾기</a>
+								<button>로그인</button>
+							</form>
+						</div>
+						<div class="login-overlay-container">
+							<div class="login-overlay">
+								<div class="login-overlay-panel login-overlay-left">
+									<h1 style="color:white" >Welcome Back!</h1>
+									<p style="color:white">아이디가 있다구욧 ?? 로그인 하세요 ~!</p>
+									<button class="ghost" id="signIn">로그인</button>
+								</div>
+								<div class="login-overlay-panel login-overlay-right" >
+									<h1 style="color:white">Hello, Friend!</h1>
+									<p style="color:white">아이디가 없다구욧 ?? 가입 하세요 ~!</p>
+									<button class="ghost" id="signUp">회원가입</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		 </div> 
+		<!-- /.modal-dialog -->
+	 </div>
+	 
+ <script>
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('login-container');
+	
+	
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+	
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>

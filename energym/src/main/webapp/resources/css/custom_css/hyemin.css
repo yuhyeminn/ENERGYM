@@ -259,11 +259,20 @@
 .login-container .sign-input::placeholder {
     color: #7e7e7e;
 }
-.modal-backdrop{z-index: inherit;}
+.modal-backdrop{z-index: 50;}
 .user-type-radio label, .gender-radio label{margin:10px;}
 .gender-radio label.radio-label{margin: 10px 0px; width: 50px;text-align: initial;cursor: initial;color:#7e7e7e}
 .radio-div{padding:4px 15px;}
 .signUp-submit-btn{margin-top:10px;}
+
+/* 로그인 모달  */
+@media (min-width: 576px){
+	 .modal-dialog.login-modal{ max-width: 800px;margin: 1.75rem auto;}
+}
+.login-modal .modal-body {padding:0px;}
+.login-modal .modal-content{background-color:transparent;}
+.login-modal .modal-header{border:none;}
+.login-modal .login-modal-close {color:white;font-size:36px; padding:0px; margin: -2rem -4rem -1rem auto;}
 
 /* 커뮤니티 게시판 */
 .community-board-container{padding:30px;background-color:#fbf9ff}
