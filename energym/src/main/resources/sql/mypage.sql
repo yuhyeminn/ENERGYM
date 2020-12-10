@@ -3,20 +3,22 @@ select member_id,member_pwd,member_name,member_email,member_phone
 from member
 where member_no=?
 
---회원정보를 수정
+--회원정보 수정
 update member 
-set member_pwd=? member_name=? member_email=? member_phone=?
+set member_pwd=?, member_name=?, member_email=?,member_phone=?
 where member_id=?
 
---회원 탈퇴하기
+--회원 탈퇴
 delete 
 from member 
 where member_no=?
 
---내가 보유한 이용권 목록을 출력하시오. 
-select t.ticket_no,t.ticket_name,t.ticket_term,t.ticket_count,g.gym_no,g.gym_name
+--이용권 목록 출력
+select p.payment_no, p.member_id, p.payment_date, t.ticket_no,t.ticket_name,t.ticket_term,t.ticket_count,g.gym_no,g.gym_name
 from ticket t,gym g
 where t.gym_no=g.gym_no
+and 
+and p.member_id=?
 
 --이용권에 해당하는 센터에서 선택한 날짜의 수업 목록을 출력하시오.
 --현재인원수는 따로 구하기(count사용)
@@ -39,7 +41,14 @@ insert
 into reservation 
 values(reservation.nextval,?,?,?,sysdate)
 
---내가 수강하는 수업 목록과 날짜를 출력하시오.
+-- 횟수 차감
+delete
+from 
+
+--수업(예약)취소하기
+delete from reservation where resv_no=?
+
+--내가 수강하는 수업 목록과 날짜를 출력하시오.(예약 목록)
 --현재인원수는 따로 구하기(count사용) 
 --(예약번호,수업날짜,수업번호,수업요일,원본파일명,업로드파일명,수업명,시작시간,종료시간,현재인원,최대인원,강사명)
 select r.resv_no,c.class_date,c.class_no,c.class_day,
@@ -50,9 +59,6 @@ where r.member_id=?
 and c.class_no=r.class_no
 and c.inst_no=i.inst_no
 
---수업(예약)취소하기
-delete from reservation where resv_no=?
- 
 --1:1문의 게시글 목록을 출력하시오.
 select qna.qna_no,gym.gym_name,qna.qna_title,qna.qna_date,qna.qna_answer
 from qna,gym

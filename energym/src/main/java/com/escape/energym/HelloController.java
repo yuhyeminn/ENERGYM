@@ -52,10 +52,10 @@ public class HelloController {
 	public String gym_detail_qna() {
 		return "/gym/gym_detail_qna";
 	}
-	@RequestMapping("/gym/ticket_payment")
-	public String ticket_payment() {
-		return "/gym/ticket_payment";
-	}
+//	@RequestMapping("/gym/ticket_payment")
+//	public String ticket_payment() {
+//		return "/gym/ticket_payment";
+//	}
 	
 	@RequestMapping("/community/board")
 	public String commu_board() {
