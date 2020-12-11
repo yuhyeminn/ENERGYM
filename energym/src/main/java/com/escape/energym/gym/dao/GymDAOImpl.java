@@ -1,11 +1,5 @@
 package com.escape.energym.gym.dao;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Repository;
-
-@Repository
-public class GymDAOImpl implements GymDAO {
-=======
 import java.util.HashMap;
 import java.util.Map;
 
@@ -53,6 +47,5 @@ public class GymDAOImpl implements GymDAO {
 
 		return gym;
 	}
->>>>>>> branch 'master' of https://github.com/yuhyeminn/ENERGYM.git
 
 }

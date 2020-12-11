@@ -1,13 +1,5 @@
 package com.escape.energym.gym.controller;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Controller;
-
-@Controller
-public class GymController {
-
-}
-=======
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -64,4 +56,3 @@ public class GymController {
 	}
 	
 }
->>>>>>> branch 'master' of https://github.com/yuhyeminn/ENERGYM.git

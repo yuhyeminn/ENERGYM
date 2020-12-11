@@ -1,12 +1,5 @@
 package com.escape.energym.member.controller;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Controller;
-
-@Controller
-public class MemberController {
-
-=======
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,5 +31,4 @@ public class MemberController {
 		
 		return mav;
 	}
->>>>>>> branch 'master' of https://github.com/yuhyeminn/ENERGYM.git
 }

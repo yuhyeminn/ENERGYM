@@ -1,11 +1,5 @@
 package com.escape.energym.gym.service;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Service;
-
-@Service
-public class GymServiceImpl implements GymService {
-=======
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +23,4 @@ public class GymServiceImpl implements GymService {
 	public Gym selectGymByNo(int gymNo) {
 		return dao.selectGymByNo(gymNo);
 	}
->>>>>>> branch 'master' of https://github.com/yuhyeminn/ENERGYM.git
-
 }
