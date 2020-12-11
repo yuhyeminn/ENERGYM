@@ -24,7 +24,8 @@ public class MemberController {
 			if(memberLoggedIn != null) {
 				mav.addObject("memberLoggedIn", memberLoggedIn);
 			}
-			mav.setViewName("/");
+			System.out.println(memberLoggedIn.toString());
+			mav.setViewName("/index");
 		}catch(Exception e) {
 			
 		}
