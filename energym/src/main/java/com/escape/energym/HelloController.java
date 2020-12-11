@@ -52,30 +52,26 @@ public class HelloController {
 	public String gym_detail_qna() {
 		return "/gym/gym_detail_qna";
 	}
-//	@RequestMapping("/gym/ticket_payment")
-//	public String ticket_payment() {
-//		return "/gym/ticket_payment";
-//	}
 	
 	@RequestMapping("/community/board")
 	public String commu_board() {
 		return "/community/board";
 	}
 	
-	@RequestMapping("/center_admin/center_info")
+	@RequestMapping("/owner/center_info")
 	public String center_info() {
-		return "/center_admin/center_info";
+		return "/owner/center_info";
 	}
-	@RequestMapping("/center_admin/center_management")
+	@RequestMapping("/owner/center_management")
 	public String center_management() {
-		return "/center_admin/center_management";
+		return "/owner/center_management";
 	}
-	@RequestMapping("/center_admin/center_registration")
+	@RequestMapping("/owner/center_registration")
 	public String center_registration() {
-		return "/center_admin/center_registration";
+		return "/owner/center_registration";
 	}
-	@RequestMapping("/center_admin/customer_management")
+	@RequestMapping("/owner/customer_management")
 	public String customer_management() {
-		return "/center_admin/customer_management";
+		return "/owner/customer_management";
 	}
 }
