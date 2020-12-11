@@ -1,12 +1,15 @@
 package com.escape.energym;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {
 	@RequestMapping("/") 
-	public String index() { 
+	public String index(HttpSession session) { 
+		System.out.println("로그인 멤버="+session.getAttribute("memberLoggedIn"));
 		return "index"; 
 	}
 	

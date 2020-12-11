@@ -41,7 +41,7 @@
 		<Logger name="jdbc.resultset" level="error" additivity="false">
 			<AppenderRef ref="Console" />
 	    </Logger>
-		<Logger name="jdbc.resultsettable" level="error" additivity="false">
+		<Logger name="jdbc.resultsettable" level="info" additivity="false">
 			<AppenderRef ref="Console" />
 	    </Logger>
 		<Logger name="jdbc.connection" level="error" additivity="false">
