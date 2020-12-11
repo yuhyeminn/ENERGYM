@@ -265,6 +265,15 @@
 .radio-div{padding:4px 15px;}
 .signUp-submit-btn{margin-top:10px;}
 
+/* 로그인 모달  */
+@media (min-width: 576px){
+	 .modal-dialog.login-modal{ max-width: 800px;margin: 1.75rem auto;}
+}
+.login-modal .modal-body {padding:0px;}
+.login-modal .modal-content{background-color:transparent;}
+.login-modal .modal-header{border:none;}
+.login-modal .login-modal-close {color:white;font-size:36px; padding:0px; margin: -2rem -4rem -1rem auto;}
+
 /* 커뮤니티 게시판 */
 .community-board-container{padding:30px;background-color:#fbf9ff}
 .community-section{padding:30px;}

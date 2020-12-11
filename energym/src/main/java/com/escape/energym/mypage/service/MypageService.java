@@ -22,5 +22,4 @@ public interface MypageService {
 	 */
 	
 	public Member readMemberOne(String memberId) throws Exception;
-	
 }
