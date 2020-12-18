@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.escape.energym.common.dto.Member;
 import com.escape.energym.common.dto.Ticket;
 import com.escape.energym.gym.service.GymService;
 
@@ -17,10 +16,10 @@ import com.escape.energym.gym.service.GymService;
 public class GymController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(GymController.class);
-	
+
 	@Autowired
 	private GymService service;
-	
+
 	//결제페이지
 	@RequestMapping("/gym/ticket_payment")
 	public String ticket_payment(Model model, HttpSession session, Ticket ticket) {
@@ -31,7 +30,6 @@ public class GymController {
 		String sessionId = sessionDto.getMemberId();
 		model.addAttribute("memberdto",service.getMemberOne(sessionId));
 		*/
-		
 		model.addAttribute("ticket", ticket);
 		model.addAttribute("price", service.getTicketPrice(ticket.getTicketName(),ticket.getTicketTerm()));
 		model.addAttribute("gymdto", service.selectGymByNo(ticket.getGymNo()));
