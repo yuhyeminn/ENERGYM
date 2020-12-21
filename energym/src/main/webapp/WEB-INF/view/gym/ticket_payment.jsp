@@ -5,14 +5,23 @@
 <script type="text/javascript">
 function pay(){
 	
-	alert("테스트");
-	 if(form==null) {
-
-	      alert("결제 방식을 선택해주세요.");      
-
-	      return;
-	       
-	    }
+	var payment = $('input[name=payment]:checked').val();
+	
+	
+	if(payment==null) {
+		
+		alert("결제 방식을 선택해주세요.");
+		
+	}else if(payment == "creditcard"){
+		
+		alert("신용카드 결제");
+		
+	}else if(payment == "kakaopay"){
+		
+		alert("카카오페이 결제");
+	}
+	
+	
 }
 </script>
 <!-- bradcam_area  -->
@@ -103,7 +112,7 @@ function pay(){
                                         </li>
                                     </ul>
                             		<div class="submit_btn">
-                                		<button class="boxed-btn3 w-100" id="pay" onclick="pay()">결제하기</button>
+                                		<button type="button" class="boxed-btn3 w-100" onclick="pay()">결제하기</button>
                             		</div>
                            		</form>
                         </div>
