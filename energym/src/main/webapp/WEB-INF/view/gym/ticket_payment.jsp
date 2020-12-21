@@ -2,7 +2,19 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="/WEB-INF/view/common/header.jsp"%>
+<script type="text/javascript">
+function pay(){
+	
+	alert("테스트");
+	 if(form==null) {
 
+	      alert("결제 방식을 선택해주세요.");      
+
+	      return;
+	       
+	    }
+}
+</script>
 <!-- bradcam_area  -->
     <div class="bradcam_area bradcam_bg_1">
         <div class="container">
@@ -47,11 +59,10 @@
                         <div class="job_content">
                             <h4>구매자 정보</h4>
                             <ul>
-                                <li>아이디: <span>ivory</span></li>
-                                <li>이름: <span>박상아</span></li>
-                                <li>성별: <span>여</span></li>
-                                <li>이메일: <span>ivory@example.com</span></li>
-                                <li>연락처: <span>010-1111-2222</span></li>
+                                <li>아이디: <span>${memberdto.memberId}</span></li>
+                                <li>이름: <span>${memberdto.memberName}</span></li>
+                                <li>이메일: <span>${memberdto.memberEmail}</span></li>
+                                <li>연락처: <span>${memberdto.memberPhone}</span></li>
                             </ul>
                         </div>
                     </div>   
@@ -68,15 +79,16 @@
                             <div class="d-flex">
 								<p>일반결제</p>
 								<div class="sa_radio primary-radio">
-									<input type="checkbox" id="primary-radio" checked="">
+									<input type="radio" id="primary-radio" checked="checked">
 									<label for="primary-radio"></label>
                                 </div>
                             </div>
+                            	<form method="post">
                                     <ul>
                                         <li><div class="d-flex">
                                             <p>신용카드</p>
                                             <div class="sa_radio primary-radio">
-                                                <input type="checkbox" id="default-radio1">
+                                                <input type="radio" id="default-radio1" name="payment" value="creditcard">
                                                 <label for="default-radio1"></label>
                                             </div>
                                         </div></li>
@@ -84,16 +96,16 @@
                                             <div class="d-flex">
                                                 <p>카카오페이</p>
                                                 <div class="sa_radio primary-radio">
-                                                    <input type="checkbox" id="default-radio2">
+                                                    <input type="radio" id="default-radio2" name="payment" value="kakaopay">
                                                     <label for="default-radio2"></label>
                                                 </div>
                                             </div>
                                         </li>
                                     </ul>
-                           
-                            <div class="submit_btn">
-                                <button class="boxed-btn3 w-100" type="submit">결제하기</button>
-                            </div>
+                            		<div class="submit_btn">
+                                		<button class="boxed-btn3 w-100" id="pay" onclick="pay()">결제하기</button>
+                            		</div>
+                           		</form>
                         </div>
                     </div>
                 </div>
