@@ -40,7 +40,6 @@
 											<li><a href="${pageContext.request.contextPath}/">홈</a></li>
 											<li><a href="${pageContext.request.contextPath}/search">센터 찾기</a></li>
 											<li><a href="#">커뮤니티</a></li>
-
 											<c:if test="${memberLoggedIn != null && memberLoggedIn.memberType eq 'user'}">
 												<li><a href="#">마이페이지</a></li>
 											</c:if>

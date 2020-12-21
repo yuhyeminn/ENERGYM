@@ -12,29 +12,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.escape.energym.common.dto.Member;
 import com.escape.energym.common.dto.Ticket;
 import com.escape.energym.gym.service.GymService;
+import com.escape.energym.member.service.MemberService;
 
 @Controller
 public class GymController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(GymController.class);
+
+	@Autowired
+	private GymService gymService;
 	
 	@Autowired
-	private GymService service;
-	
+	private MemberService memberService;
+
 	//결제페이지
 	@RequestMapping("/gym/ticket_payment")
 	public String ticket_payment(Model model, HttpSession session, Ticket ticket) {
 		logger.info("TICKET PAYMENT");
 		
-		/* 세션객체 생기면 다시
-		Member sessionDto = (Member)session.getAttribute("login");
+		Member sessionDto = (Member)session.getAttribute("memberLoggedIn");
 		String sessionId = sessionDto.getMemberId();
-		model.addAttribute("memberdto",service.getMemberOne(sessionId));
-		*/
-		
-		model.addAttribute("ticket", ticket);
-		model.addAttribute("price", service.getTicketPrice(ticket.getTicketName(),ticket.getTicketTerm()));
-		model.addAttribute("gymdto", service.selectGymByNo(ticket.getGymNo()));
+		model.addAttribute("memberdto",memberService.selectOneMember(sessionId));
+//		model.addAttribute("ticket", ticket);
+//		model.addAttribute("price", service.getTicketPrice(ticket.getTicketName(),ticket.getTicketTerm()));
+//		model.addAttribute("gymdto", service.selectGymByNo(ticket.getGymNo()));
 		
 		return "/gym/ticket_payment";
 	}
