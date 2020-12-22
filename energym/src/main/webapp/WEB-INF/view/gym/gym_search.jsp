@@ -123,14 +123,15 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="pagination_wrap">
-								<ul>
+								<!-- <ul>
 									<li><a href="#"> <i class="ti-angle-left"></i>
 									</a></li>
 									<li><a href="#"><span>01</span></a></li>
 									<li><a href="#"><span>02</span></a></li>
 									<li><a href="#"> <i class="ti-angle-right"></i>
 									</a></li>
-								</ul>
+								</ul> -->
+								${pageBar }
 							</div>
 						</div>
 					</div>

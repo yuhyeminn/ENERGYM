@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gym">
+	<select id="selectExerciseCategoryList" resultType="exerciseCategory">
+		select * from exercise_category
+	</select> 
+	
+	<!-- 검색 조건에 맞는 gym 리스트 -->
+	<select id="selectGymSearchList" resultMap="gymExerciseMap">
+		select g.*,
+      		   (select ex.exercise_category_name from exercise_category ex where ex.exercise_category_no = e.exercise_category_no) as gym_exercise 
+		from gym g left join exercise e on g.gym_no = e.gym_no
+		where 1=1
+		<if test="location != '' and location != null and location != 'ALL'">and g.gym_address like '%${location}%'</if>
+		<if test="exercise != 'ALL'">and g.gym_no in (select e2.gym_no from exercise e2 where e2.exercise_category_no = #{exercise}) </if>
+		<if test="keyword != '' and keyword != null">and (g.gym_daddress like '%${keyword}%' or g.gym_name like '%${keyword}%') </if>
+	</select>
+	
+	<!-- 편의시설 전체 리스트 -->
+	<select id="selectFacilityList" resultType="Map">
+		select fac_category_no, fac_category_name from facilities_category order by fac_category_name
+	</select>
+	
+	<resultMap type="gym" id="gymExerciseMap">
+		<id column="gym_no" property="gymNo"></id>
+		<result column="member_id" property="memberId"></result>
+		<result column="gym_name" property="gymName"></result>
+		<result column="gym_phone" property="gymPhone"></result>
+		<result column="gym_address" property="gymAddress"></result>
+		<result column="gym_daddress" property="gymDaddress"></result>
+		<result column="gym_summary" property="gymSummary"></result>
+		<result column="gym_time" property="gymTime"></result>
+		<result column="gym_program" property="gymProgram"></result>
+		<result column="gym_service" property="gymService"></result>
+		<collection property="gymExercise" javaType="List" ofType="string">
+			<result column="gym_exercise"></result>
+		</collection>
+	</resultMap>
+</mapper>

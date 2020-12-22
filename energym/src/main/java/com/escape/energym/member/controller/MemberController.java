@@ -1,12 +1,13 @@
 package com.escape.energym.member.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.escape.energym.common.dto.Member;
 import com.escape.energym.member.service.MemberService;
@@ -19,18 +20,17 @@ public class MemberController {
 	MemberService memberService;
 	
 	@RequestMapping("/member/login")
-	public ModelAndView login(@RequestParam String memberId, @RequestParam String memberPwd, ModelAndView mav) {
+	public String login(@RequestParam String memberId, @RequestParam String memberPwd, HttpSession session) {
 		try {
 			Member memberLoggedIn = memberService.selectOneMember(memberId);
 			if(memberLoggedIn != null) {
-				mav.addObject("memberLoggedIn", memberLoggedIn);
+				session.setAttribute("memberLoggedIn", memberLoggedIn);
 			}
-			mav.setViewName("/index");
 		}catch(Exception e) {
 			
 		}
 		
-		return mav;
+		return "redirect:/";
 	}
 	
 	@RequestMapping("/member/logout")
