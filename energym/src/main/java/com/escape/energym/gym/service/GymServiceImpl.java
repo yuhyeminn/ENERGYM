@@ -11,6 +11,9 @@ import com.escape.energym.common.dto.ExerciseCategory;
 import com.escape.energym.common.dto.Gym;
 import com.escape.energym.gym.dao.GymDAO;
 
+import com.escape.energym.common.dto.Gym;
+import com.escape.energym.gym.dao.GymDAO;
+
 @Service
 @Transactional
 public class GymServiceImpl implements GymService {
