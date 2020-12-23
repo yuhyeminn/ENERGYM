@@ -110,3 +110,4 @@ buildNumber.properties
 
 ### custom
 application.properties
+energym/src/main/resources/application.properties
