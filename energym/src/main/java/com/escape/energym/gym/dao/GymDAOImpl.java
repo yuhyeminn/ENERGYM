@@ -1,12 +1,14 @@
 package com.escape.energym.gym.dao;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.escape.energym.common.dto.ExerciseCategory;
 import com.escape.energym.common.dto.Gym;
 
 @Repository
@@ -46,6 +48,21 @@ public class GymDAOImpl implements GymDAO {
 		}
 
 		return gym;
+	}
+
+	@Override
+	public List<ExerciseCategory> selectExerciseCategoryList() {
+		return sqlSession.selectList(namespace + "selectExerciseCategoryList");
+	}
+
+	@Override
+	public List<Gym> selectGymSearchList(Map<String, Object> param) {
+		return sqlSession.selectList(namespace + "selectGymSearchList", param);
+	}
+
+	@Override
+	public List<Map<String, Object>> selectFacilityList() {
+		return sqlSession.selectList(namespace + "selectFacilityList");
 	}
 
 }

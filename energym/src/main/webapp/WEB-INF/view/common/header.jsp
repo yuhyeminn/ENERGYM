@@ -39,9 +39,13 @@
 										<ul id="navigation">
 											<li><a href="${pageContext.request.contextPath}/">홈</a></li>
 											<li><a href="${pageContext.request.contextPath}/search">센터 찾기</a></li>
-											<li><a href="#">커뮤니티</i></a></li>
-											<!-- <li><a href="#">마이페이지</i></a> -->
-											</li>
+											<li><a href="#">커뮤니티</a></li>
+											<c:if test="${memberLoggedIn != null && memberLoggedIn.memberType eq 'user'}">
+												<li><a href="#">마이페이지</a></li>
+											</c:if>
+											<c:if test="${memberLoggedIn != null && memberLoggedIn.memberType eq 'owner'}">
+												<li><a href="#">센터 관리/등록</a></li>
+											</c:if>
 										</ul>
 									</nav>
 								</div>
@@ -49,7 +53,12 @@
 							<div class="col-xl-3 col-lg-3 d-none d-lg-block">
 								<div class="Appointment">
 									<div class="d-none d-lg-block">
-										<a class="boxed-btn3" href="#" data-toggle="modal" data-target="#login-register-modal">로그인</a>
+										<c:if test="${memberLoggedIn == null }">
+											<a class="boxed-btn3" data-toggle="modal" data-target="#login-register-modal">로그인</a>
+										</c:if>
+										<c:if test="${memberLoggedIn != null }">
+											<a class="boxed-btn3" href="${pageContext.request.contextPath}/member/logout">로그아웃</a>
+										</c:if>
 									</div>
 								</div>
 							</div>

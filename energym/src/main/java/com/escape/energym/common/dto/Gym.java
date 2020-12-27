@@ -1,5 +1,7 @@
 package com.escape.energym.common.dto;
 
+import java.util.List;
+
 import lombok.Data;
 
 @Data
@@ -14,4 +16,6 @@ public class Gym {
 	private String gymTime;
 	private String gymProgram;
 	private String gymService;
+	
+	private List<String> gymExercise;
 }
