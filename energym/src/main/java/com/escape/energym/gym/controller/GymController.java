@@ -66,6 +66,7 @@ public class GymController {
 		return "";
 	}
 	
+
 	
 	
 	
@@ -232,4 +233,5 @@ public class GymController {
 		
 		return mav;
 	}
+
 }

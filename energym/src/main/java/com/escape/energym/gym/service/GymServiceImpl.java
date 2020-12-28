@@ -31,6 +31,7 @@ public class GymServiceImpl implements GymService {
 		return dao.selectGymByNo(gymNo);
 	}
 
+
 	@Override
 	public List<ExerciseCategory> selectExerciseCategoryList() {
 		return dao.selectExerciseCategoryList();
@@ -45,4 +46,5 @@ public class GymServiceImpl implements GymService {
 	public List<Map<String, Object>> selectFacilityList() {
 		return dao.selectFacilityList();
 	}
+
 }
