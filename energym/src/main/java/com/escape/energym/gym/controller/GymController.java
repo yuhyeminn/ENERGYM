@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.escape.energym.common.dto.ExerciseCategory;
 import com.escape.energym.common.dto.Gym;
 import com.escape.energym.common.dto.Member;
 import com.escape.energym.common.dto.Ticket;
@@ -213,11 +214,14 @@ public class GymController {
 			//gym 리스트
 			List<Gym> gym_list = gymService.selectGymSearchList(param);
 			
+			//운동 종목 리스트(상세 필터)
+			List<ExerciseCategory> exercise_list = gymService.selectExerciseCategoryList();
+			
 			//편의시설 전체 리스트(상세 필터)
 			List<Map<String, Object>> fac_list = gymService.selectFacilityList();
 			
-			
 			mav.addObject("gym_list", gym_list);
+			mav.addObject("exercise_list", exercise_list);
 			mav.addObject("fac_list", fac_list);
 			mav.addObject("pageBar", Utils.getPageBar(gym_list.size(), cPage, 1, Utils.getURL(request)));
 			mav.setViewName("/gym/gym_search");

@@ -44,10 +44,10 @@
 								<div class="col-lg-12">
 									<div class="single_field">
 										<select class="wide">
-											<option data-display="운동 종목">운동 종목</option>
-											<option value="1">헬스</option>
-											<option value="2">요가</option>
-											<option value="3">필라테스</option>
+											<option data-display="운동 종목" value="ALL">ALL</option>
+				                            <c:forEach items="${exercise_category}" var="ex">
+				                           		<option value="${ex.exerciseCategoryNo}">${ex.exerciseCategoryName}</option>
+				                            </c:forEach>
 										</select>
 									</div>
 								</div>
@@ -56,9 +56,9 @@
 										<span>부대시설</span>
 									</div>
 									<div class="facilities_check">
-										<label class="w-100"><input type="checkbox" name="수영장" value="수영장"> 주차장 </label> 
-										<label class="w-100"><input type="checkbox" name="샤워실" value="샤워실"> 샤워실 </label> 
-										<label class="w-100"><input type="checkbox" name="라커" value="라커"> 라커 </label>
+										<c:forEach items="${fac_list}" var="fac">
+											<label class="w-100"><input type="checkbox" name="facility" value="${fac['FAC_CATEGORY_NO']}"> ${fac['FAC_CATEGORY_NAME']} </label> 
+										</c:forEach>
 									</div>
 								</div>
 							</div>
@@ -123,7 +123,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="pagination_wrap">
-								<!-- <ul>
+								 <!-- <ul>
 									<li><a href="#"> <i class="ti-angle-left"></i>
 									</a></li>
 									<li><a href="#"><span>01</span></a></li>
