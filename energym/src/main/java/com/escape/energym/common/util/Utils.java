@@ -25,31 +25,31 @@ public class Utils {
 		//페이지바 순회용 증감변수
 		int pageNo = pageStart;
 		
-		pageBar += "<ul class='pagination justify-content-center'>";
+		pageBar += "<ul>";
 		
 		//[이전] previous
 		if(pageNo==1) { 
 			//비활성화: disabled
-			pageBar += "<li class=\"page-item disabled\">"
-					+  "<a class=\"page-link\" href=\"#\" tabindex=\"-1\">이전</a>"
+			pageBar += "<li>"
+					+  "<a href=\"#\" tabindex=\"-1\"><i class=\"ti-angle-left\"></i></a>"
 					+  "</li>";
 		}
 		else {
-			pageBar += "<li class=\"page-item\">"
-					+  "<a class=\"page-link\" href=\""+url+"&cPage="+(pageNo-1)+"\">이전</a>"
+			pageBar += "<li>"
+					+  "<a href=\""+url+"&cPage="+(pageNo-1)+"\"><i class=\"ti-angle-left\"></i></a>"
 					+  "</li>";
 		}
 		
 		//[pageNo]
 		while(!(pageNo>pageEnd || pageNo>totalPage)) {
 			if(pageNo == cPage) {
-				pageBar += "<li class=\"page-item active\">"
-						+  "<a class=\"page-link\">"+pageNo+"</a>"
+				pageBar += "<li class=\"active\">"
+						+  "<a>"+pageNo+"</a>"
 						+  "</li>";
 			}
 			else {
 				pageBar += "<li class=\"page-item\">"
-						+  "<a class=\"page-link\" href=\""+url+"&cPage="+pageNo+"\">"+pageNo+"</a>"
+						+  "<a href=\""+url+"&cPage="+pageNo+"\">"+pageNo+"</a>"
 						+  "</li>";
 			}
 			
@@ -59,13 +59,13 @@ public class Utils {
 		//[다음] next 
 		if(pageNo > totalPage) {
 			//비활성화: disabled
-			pageBar += "<li class=\"page-item disabled\">"
-					+  "<a class=\"page-link\" href=\"#\" tabindex=\"-1\">다음</a>"
+			pageBar += "<li>"
+					+  "<a href=\"#\" tabindex=\"-1\"><i class=\"ti-angle-right\"></i></a>"
 					+  "</li>";
 		}
 		else {
-			pageBar += "<li class=\"page-item\">"
-					+  "<a class=\"page-link\" href=\""+url+"&cPage="+pageNo+"\">다음</a>"
+			pageBar += "<li>"
+					+  "<a href=\""+url+"&cPage="+pageNo+"\"><i class=\"ti-angle-right\"></i></a>"
 					+  "</li>";
 		}
 		
